@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 class Stack {
     #stack;
 
@@ -18,6 +17,7 @@ class Stack {
     }
 
     peek() {
+
         return this.#stack[this.#stack.length - 1];
 
     }
@@ -27,12 +27,12 @@ module.exports = {
     Stack
 };
 
-const myStack = new Stack();
-myStack.push('[');
-console.log(myStack);
-myStack.pop();
-console.log(myStack);
-myStack.push('[');
-myStack.push('{');
-myStack.peek();
-console.log(myStack.peek());
+// const myStack = new Stack();
+// myStack.push('[');
+// console.log(myStack);
+// myStack.pop();
+// console.log(myStack);
+// myStack.push('[');
+// myStack.push('{');
+// myStack.peek();
+// console.log(myStack.peek());
