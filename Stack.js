@@ -1,36 +1,38 @@
 /* eslint-disable no-console */
 class Stack {
-    stack;
+    #stack;
 
     constructor() {
-        this.stack = [];
+        this.#stack = [];
     }
 
     push(item) {
-        this.stack = [];
+        this.#stack.push(item);
 
     }
 
     pop() {
-        return this.stack.pop();
+        return this.#stack.pop();
 
 
     }
 
     peek() {
-        return this.stack[this.stack.length - 1];
+        return this.#stack[this.#stack.length - 1];
 
     }
 }
 
-module.exports = { Stack };
+module.exports = {
+    Stack
+};
 
 const myStack = new Stack();
-myStack.push("[");
+myStack.push('[');
 console.log(myStack);
 myStack.pop();
 console.log(myStack);
-myStack.push("[");
-myStack.push("{");
+myStack.push('[');
+myStack.push('{');
 myStack.peek();
 console.log(myStack.peek());
