@@ -1,6 +1,5 @@
 
 const { linter } = require('./linter.js');
-const { looper } = require('./linter.js')
 const express = require('express');
 const app = express();
 
