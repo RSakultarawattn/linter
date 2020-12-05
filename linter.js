@@ -46,6 +46,12 @@ const looper = (array) => {
         }
       }
     });
+  if (bracketStack.peek()) {
+    return {
+      missing: matchBrackets[bracketStack.peek()]
+    };
+
+  }
   return result;
 };
 
@@ -61,12 +67,11 @@ const linter = (body) => {
     'error': `missing ${result.missing}`
   };
 };
-const testLinter = linter('function add(a, b) {]return a + b;}');
+const testLinter = linter('function add(a, b) {return a + b;}');
 console.log(testLinter);
 
 
 module.exports = {
 
-  linter,
-  looper
+  linter
 };
